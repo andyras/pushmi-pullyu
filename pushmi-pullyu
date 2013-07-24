@@ -1,4 +1,6 @@
 #!/bin/bash
+# This script simplifies scping files to/from prespecified hosts.
+# To add a new host, just add another switch in the case statement.
 
 function print_help {
   echo "Usage: ${0} {push | pull} HOSTNAME SOURCEDIR DESTDIR"
