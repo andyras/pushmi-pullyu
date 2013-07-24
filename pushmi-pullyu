@@ -1,0 +1,67 @@
+#!/bin/bash
+
+function print_help {
+  echo "Usage: ${0} {push | pull} HOSTNAME SOURCEDIR DESTDIR"
+  exit
+}
+
+# make sure the input is in the right format
+if [ -z ${1} ]; then
+  echo "'push' or 'pull'--tell me what you WANT."
+  print_help
+elif [ -z ${2} ]; then
+  echo "AAAAGH! Provide a hostname at least."
+  print_help
+elif [ -z ${3} ]; then
+  echo "NNNNNG! Give me a source directory."
+  print_help
+elif [ -z ${4} ]; then
+  echo "NOOOOO! Specify the destination."
+  print_help
+fi
+
+case ${2} in
+  "aitchbar")
+    host="andyras@aitchbar.dyndns.tv"
+    ;;
+  "cybertron")
+    host="andyras@cybertron.dyndns.ws"
+    ;;
+  "tim")
+    host="andyras@tim.selfip.org"
+    ;;
+  "hex")
+    host="andyras@hex.selfip.org"
+    ;;
+  "radon")
+    host="andyras@radon.theory.northwestern.edu"
+    ;;
+  "quest")
+    host="ara132@aitchbar.dyndns.tv"
+    ;;
+  "deneb")
+    host="andyras@deneb.mine.nu"
+    ;;
+  "malloc")
+    host="andyras@deneb.mine.nu"
+    ;;
+  "robozoid")
+    host="andyras@robozoid.mine.nu"
+    ;;
+  *)
+    echo "${2} is not a known host."
+    exit
+    ;;
+esac
+
+case ${1} in
+  "push")
+    scp -r "${3}" "${host}:${4}"
+    ;;
+  "pull")
+    scp -r "${host}:${3}" "${4}"
+    ;;
+  *)
+    echo "I don't know the command '${1}'."
+    ;;
+esac
