@@ -1,0 +1,4 @@
+#!/bin/bash
+# This is a wrapper for pushmi-pullyu that pulls files from a remote computer.
+
+pushmi-pullyu pull ${1} ${2} ${3}

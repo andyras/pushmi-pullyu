@@ -1,0 +1,4 @@
+#!/bin/bash
+# This is a wrapper for pushmi-pullyu that pushes files to another computer.
+
+pushmi-pullyu push ${1} ${2} ${3}
