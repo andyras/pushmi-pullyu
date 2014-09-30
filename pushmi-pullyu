@@ -27,28 +27,31 @@ case ${2} in
     host="andyras@aitchbar.dyndns.tv"
     ;;
   "cybertron")
-    host="andyras@cybertron.dyndns.ws"
+    host="weiss@cybertron.dyndns.ws"
     ;;
   "tim")
     host="andyras@tim.selfip.org"
     ;;
   "hex")
-    host="andyras@hex.selfip.org"
+    host="andyras@hex.research.northwestern.edu"
+    ;;
+  "ra")
+    host="andyras@radon.theory.northwestern.edu"
     ;;
   "radon")
     host="andyras@radon.theory.northwestern.edu"
     ;;
+  "tin")
+    host="andyras@tin.theory.northwestern.edu"
+    ;;
+  "sn")
+    host="andyras@tin.theory.northwestern.edu"
+    ;;
   "quest")
-    host="ara132@aitchbar.dyndns.tv"
+    host="ara132@quest.it.northwestern.edu"
     ;;
   "deneb")
     host="andyras@deneb.mine.nu"
-    ;;
-  "malloc")
-    host="andyras@deneb.mine.nu"
-    ;;
-  "robozoid")
-    host="andyras@robozoid.mine.nu"
     ;;
   *)
     echo "${2} is not a known host."
