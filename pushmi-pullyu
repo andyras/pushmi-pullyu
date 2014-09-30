@@ -61,10 +61,10 @@ esac
 
 case ${1} in
   "push")
-    scp -rC "${3}" "${host}:${4}"
+    scp -rpC "${3}" "${host}:${4}"
     ;;
   "pull")
-    scp -rC "${host}:${3}" "${4}"
+    scp -rpC "${host}:${3}" "${4}"
     ;;
   *)
     echo "I don't know the command '${1}'."
